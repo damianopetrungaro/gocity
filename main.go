@@ -52,7 +52,7 @@ func main() {
 				baseURL := c.Args().First()
 				url, ok := utils.GetGithubBaseURL(c.Args().First())
 				if !ok {
-					return fmt.Errorf("invalid project URL: %s", baseURL)
+					fmt.Printf("invalid project URL: %s", baseURL)
 				}
 
 				analyzer.SetProjectURL(url)
